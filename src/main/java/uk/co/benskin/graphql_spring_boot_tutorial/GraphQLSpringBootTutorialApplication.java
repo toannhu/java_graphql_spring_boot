@@ -5,8 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class GraphQLSpringBootTutorialApplication extends SpringBootServletInitializer {
-
+//public class GraphQLSpringBootTutorialApplication extends SpringBootServletInitializer {
+public class GraphQLSpringBootTutorialApplication {
+    
     public static void main(String[] args) {
         SpringApplication.run(GraphQLSpringBootTutorialApplication.class, args);
     }
