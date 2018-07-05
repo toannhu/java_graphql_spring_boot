@@ -4,6 +4,7 @@ import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import uk.co.benskin.graphql_spring_boot_tutorial.entities.Owner;
 
@@ -15,14 +16,16 @@ import uk.co.benskin.graphql_spring_boot_tutorial.repositories.PetRepository;
 @RequiredArgsConstructor
 public class Query implements GraphQLQueryResolver {
 
+    @Autowired
     private final PetRepository PetRepository;
     
+    @Autowired
     private final OwnerRepository OwnerRepository;
 
     public Iterable<Pet> pets() {
         return PetRepository.findAll();
     }
-
+    
     public Optional<Pet> petId(Long id) {
         return PetRepository.findById(id);
     }

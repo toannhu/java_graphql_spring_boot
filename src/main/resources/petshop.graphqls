@@ -9,6 +9,14 @@ type Query {
 type Mutation {
     newPet(type: Animal!, name: String!, age: Int!, ownerId: Int!): Pet
     updatePet(id: Int!, type: Animal!, name: String!, age: Int!, ownerId: Int!): Pet
+    newOwner(name: String!, age: Int!): Owner
+    updateOwner(id: Int!, name: String!, age: Int!): Owner
+    addNestedObject(obj: NestedObject!): Owner
+}
+
+input NestedObject {
+    owner: Owner
+    pets: [Pet]
 }
 
 type Pet {
@@ -17,14 +25,13 @@ type Pet {
     name: String!
     age: Int!
     owner: Owner!
-    ownerId: Int!
 }
 
 type Owner {
     id: Int!
     name: String!
     age: Int!
-    pets: [Pet]
+    pets: [Pet]!
 }
 
 enum Animal {

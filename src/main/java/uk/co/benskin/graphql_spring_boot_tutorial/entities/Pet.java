@@ -39,26 +39,23 @@ public class Pet {
 
     @Column(name="age")
     private int age;
-    
-    @Column(name="owner_id")
-    private long ownerId;
-    
+     
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner_id", insertable = false, updatable = false)
+    @JoinColumn(name = "owner_id", nullable = false)
     private Owner owner;
     
-    public Pet(Animal type, String name, int age, long ownerId) {
+    public Pet(Animal type, String name, int age, Owner owner) {
         this.name = name;
         this.age = age;
         this.type = type;
-        this.ownerId = ownerId;
+        this.owner = owner;
     }
     
-    public Pet(long id, Animal type, String name, int age, long ownerId) {
+    public Pet(long id, Animal type, String name, int age, Owner owner) {
         this.id = id;
         this.type = type;
         this.name = name;
         this.age = age;
-        this.ownerId = ownerId;
+        this.owner = owner;
     }
 }
