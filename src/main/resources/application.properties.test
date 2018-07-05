@@ -1,0 +1,5 @@
+# COPY THIS FILE TO application.properties, CHANGE THE VALUES BELOW AND REMOVE THIS LINE
+spring.datasource.url=jdbc:mysql://localhost:3306/graphql_tutorial
+spring.datasource.username=YourUsernameHere
+spring.datasource.password=YourPasswordHere
+server.port=9000
