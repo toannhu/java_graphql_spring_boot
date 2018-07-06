@@ -1,2 +1,5 @@
 https://medium.com/@__xuorig__/graphql-mutation-design-batch-updates-ca2452f92833
 https://medium.com/@iguissouma/rapid-development-of-simple-crud-graphql-apis-in-java-and-spring-boot-bafc4e8d387a
+https://g00glen00b.be/graphql-mutations-spring/
+https://nwillc.wordpress.com/2016/10/13/graphql-java-server-javascript-client/
+http://graphql-java.readthedocs.io/en/latest/schema.html
